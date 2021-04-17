@@ -1,0 +1,231 @@
+:root {
+    --bg-menu: #00296b;
+    --bg-tiles: #ffffff;
+    --bg-tiles2: #dad7cd;
+    --bg-section: #fdc500;
+    --bg-contact-section: #f69900;
+    --line-tiles: #003f88;
+    --text-section: #000000;
+    --text-contrast: #ffffff;
+    --text-welcome: #000000;
+    --text-name: #f69900;
+    --text-general: #001233;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    background-color: var(--bg-menu);
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#navbar a,
+#navbar ul {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--text-contrast);
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+
+#navbar li {
+    display: inline;
+    margin: 1rem;
+}
+
+#welcome-section {
+    padding: 2rem;
+    height: 100vh;
+    text-align: center;
+    color: var(--text-welcome);
+    margin-top: 2rem;
+    padding: 5rem 1rem 5rem 1rem;
+    /* background: linear-gradient(to bottom, var(--bg-tiles2), var(--bg-section)); */
+}
+
+#welcome-section>h1 {
+    font-size: 4rem;
+}
+
+#welcome-section>p {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--text-general);
+    line-height: 1em;
+    padding: 2rem;
+}
+
+.name {
+    color: var(--text-name);
+}
+
+hr {
+    border: 0;
+    height: 0;
+    width: 70%;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#projects {
+    text-align: center;
+    color: var(--text-section);
+    /* The following 2 lines are to center the content of the section*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bg-section);
+    padding: 1em;
+}
+
+#projects>h2 {
+    padding: 1rem;
+    color: var(--bg-menu);
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 2rem;
+}
+
+.grid-projects {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(150, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.project-tile {
+    width: 100%;
+    border: 1px solid var(--line-tiles);
+    background-color: var(--bg-tiles);
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.project-tile>a {
+    padding-top: 1em;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+}
+
+.project-tile>a>p {
+    padding: 1em;
+    font-weight: 700;
+    color: var(--text-section);
+    background-color: var(--bg-tiles2);
+    border-top: solid 1px var(--line-tiles);
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.img-project {
+    /* Resize image */
+    padding: 1em;
+    max-width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.wave {
+    display: none;
+}
+
+.contact-section {
+    text-align: center;
+    color: var(--text-contrast);
+    background-color: var(--bg-menu);
+    /* The following 2 lines are to center the content of the section*/
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+.contact-section>.header>h2 {
+    color: var(--text-contrast);
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#profile-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-contrast);
+    font-size: 1em;
+    padding: 1em;
+    border: 1px solid var(--bg-section);
+    width: 80%;
+    margin: 1em;
+}
+
+@media (min-width: 600px) {
+    .wave {
+        display: block;
+        width: 100%;
+    }
+    #welcome-section {
+        margin-top: 0;
+        margin: 0;
+        padding: 0;
+    }
+    #projects {
+        width: 90%;
+        border-radius: 1em;
+        margin-bottom: 1em;
+    }
+    #navbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: right;
+    }
+    .grid-projects {
+        grid-template-columns: repeat( auto-fit, minmax(450px, 1fr));
+    }
+    .img-project {
+        padding: 1em;
+        max-width: 178%;
+        height: 300px;
+        overflow: hidden;
+    }
+    .contact-section {
+        padding: 0;
+        color: var(--bg-tiles);
+        background-color: var(--bg-menu);
+    }
+    #profile-link {
+        padding: 1rem;
+        font-size: 1rem;
+        max-width: 30%;
+    }
+}
