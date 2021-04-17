@@ -1,4 +1,4 @@
-Technical Documentation Page - FreeCodeCamp
+Portfolio WebPage - FreeCodeCamp
 -------------------------------------------
 This is my 5th challenge from the [Responsive Web Design Certification](https://www.freecodecamp.org/learn/responsive-web-design/) of freeCodeCamp.
 
